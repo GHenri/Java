@@ -19,24 +19,24 @@ public class TestEtu {
 	public static void main(String[] args) {
 		char choix;
 		do{
-		choix = (JOptionPane.showInputDialog(getMenu())).charAt(0);// change str en char
-		switch (choix){
-		case '1' :
-		String nom = JOptionPane.showInputDialog("Nom de l'étudiant : ");
-		Etudiant etu = new Etudiant(nom);
-		______________._______________._____(etu);
-		break;
-		case '2' :
-		for (Etudiant etud : Etudiant.listeEtu) {
-		int points = Integer.parseInt(JOptionPane.showInputDialog(
-		etud.toString()+"\nNouveaux points de cet étudiant : "));
-		____.____________________(points);
-		}
-		break;
-		case '3' :
-		JOptionPane.showMessageDialog(null, Etudiant.toStringAll());
-		break;
-		}
+			choix = (JOptionPane.showInputDialog(getMenu())).charAt(0);// change str en char
+			switch (choix){
+			case '1' :
+				String nom = JOptionPane.showInputDialog("Nom de l'étudiant : ");
+				Etudiant etu = new Etudiant(nom);
+				______________._______________._____(etu);
+				break;
+			case '2' :
+				for (Etudiant etud : Etudiant.listeEtu) {
+					int points = Integer.parseInt(JOptionPane.showInputDialog(
+							etud.toString()+"\nNouveaux points de cet étudiant : "));
+					____.____________________(points);
+				}
+				break;
+			case '3' :
+				JOptionPane.showMessageDialog(null, Etudiant.toStringAll());
+				break;
+			}
 		}while (choix!='0');
-		}
+	}
 }
