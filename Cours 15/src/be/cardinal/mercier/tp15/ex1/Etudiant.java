@@ -7,10 +7,8 @@ public class Etudiant {
 	private static int dernierNumAttribue = 0;
 	private int num;
 	private ArrayList<Integer> listePoints = new ArrayList<Integer>();
-
-
-
-//public static Etudiant listeEtu = new Etudiant ();
+	
+	public static ArrayList<Etudiant> listeEtu = new ArrayList<Etudiant>();
 
 	public Etudiant(String nom){
 		this.nom = nom;
@@ -18,16 +16,16 @@ public class Etudiant {
 	}
 	public double moyenne(){
 		double somme = 0;
-		//for (Integer points ; points < listePoints.size() ) {
+		for (Integer points : listePoints) {
 			somme += points;
-		//}
+		}
 		if (listePoints.size() == 0) return 0;
 		return somme / listePoints.size();
 	}
 	
 	public String toString() {
 		StringBuffer s = new StringBuffer("Nom : " + nom + " num : "+num+"\nPoints : ");
-		for (Integer points : ) {
+		for (Integer points : listePoints ) {
 		s.append("\t" + points);
 		}
 		s.append("\n" + "moyenne = " + this.moyenne()+"\n");
@@ -36,11 +34,11 @@ public class Etudiant {
 	}
 	
 	public static void ajouteEtu(Etudiant newEtu){
-		_._(newEtu);
+		listeEtu.add(newEtu);
 	}
 	
 	public void ajoutePoint(int newPoint){
-		____________.______(newPoint);
+		listePoints.add(newPoint);
 	}
 	
 	/**
@@ -49,7 +47,7 @@ public class Etudiant {
 	public static String toStringAll(){
 		
 		StringBuffer sb = new StringBuffer();
-		for (Etudiant etudiant : __________________) {
+		for (Etudiant etudiant : Etudiant.listeEtu) {
 			sb.append(etudiant.toString());
 		}
 		

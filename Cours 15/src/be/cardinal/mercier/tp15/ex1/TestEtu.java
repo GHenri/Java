@@ -1,7 +1,7 @@
 package be.cardinal.mercier.tp15.ex1;
 
 import javax.swing.JOptionPane;
-import java.util.ArrayList;
+
 
 public class TestEtu {
 	public static String getMenu(){
@@ -9,7 +9,7 @@ public class TestEtu {
 		sb.append("1. Ajouter un étudiant\n");
 		sb.append("2. Ajouter un nouveau résultat à tous les étudiants\n");
 		sb.append("3. Afficher les étudiants et leur moyenne.\n");
-		sb.append("4. Supprimer un étudiant");
+		sb.append("4. Supprimer un étudiant\n");
 		sb.append("0. Quitter\n");
 		sb.append("Votre choix : \n");
 		String s = new String(sb);
@@ -24,13 +24,13 @@ public class TestEtu {
 			case '1' :
 				String nom = JOptionPane.showInputDialog("Nom de l'étudiant : ");
 				Etudiant etu = new Etudiant(nom);
-				______________._______________._____(etu);
+				Etudiant.listeEtu.add(etu);
 				break;
 			case '2' :
 				for (Etudiant etud : Etudiant.listeEtu) {
 					int points = Integer.parseInt(JOptionPane.showInputDialog(
 							etud.toString()+"\nNouveaux points de cet étudiant : "));
-					____.____________________(points);
+					etud.ajoutePoint(points);
 				}
 				break;
 			case '3' :
