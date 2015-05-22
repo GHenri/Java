@@ -26,7 +26,7 @@ public class Etudiant {
 	public String toString() {
 		StringBuffer s = new StringBuffer("Nom : " + nom + " num : "+num+"\nPoints : ");
 		for (Integer points : listePoints ) {
-		s.append("\t" + points);
+		s.append("\t" + points+',');
 		}
 		s.append("\n" + "moyenne = " + this.moyenne()+"\n");
 		String s2 = new String(s);
