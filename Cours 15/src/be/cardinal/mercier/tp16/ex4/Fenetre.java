@@ -11,6 +11,10 @@ import javax.swing.JTextField;
 
 public class Fenetre extends JFrame implements ActionListener {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel panneau ;
 	private JButton boutonCopier ;
 	private JTextField saisie, copie ;
